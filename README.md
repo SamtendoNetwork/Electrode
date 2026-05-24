@@ -29,6 +29,7 @@ Bicycle's dependencies and build tooling can be handled as a container, which is
 docker build -t inkay .
 docker run --rm -v $(pwd):/app inkay make
 # you can replace "make" with other commands - e.g. make clean
+# on Windows, replace "$(pwd)" with "%cd%"
 ```
 If using `podman` on SELinux systems (like Fedora Linux), you might need to use `$(pwd):/app:Z` instead of `$(pwd):/app`.
 
