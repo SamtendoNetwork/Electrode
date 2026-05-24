@@ -1,4 +1,4 @@
-.plugin_name="Bicycle"
+.plugin_name="Electrode"
 ,.network_category="Network selection"
 ,.connect_to_network_setting="Connect to Samtendo Network"
 ,.show_startup_toast_setting="Show startup toast"
