@@ -39,16 +39,16 @@
 
 #include "ca_pem.h"
 
-#define INKAY_VERSION "v3.0.0"
+#define INKAY_VERSION "v0.0.1"
 
 /**
     Mandatory plugin information.
     If not set correctly, the loader will refuse to use the plugin.
 **/
-WUMS_MODULE_EXPORT_NAME("inkay");
-WUMS_MODULE_DESCRIPTION("Pretendo Network Patcher");
+WUMS_MODULE_EXPORT_NAME("electrode");
+WUMS_MODULE_DESCRIPTION("Samtendo Network Patcher");
 WUMS_MODULE_VERSION(INKAY_VERSION);
-WUMS_MODULE_AUTHOR("Pretendo contributors");
+WUMS_MODULE_AUTHOR("Samtendo contributors");
 WUMS_MODULE_LICENSE("GPLv3");
 
 WUMS_DEPENDS_ON(homebrew_functionpatcher);
@@ -150,14 +150,14 @@ static void Inkay_Initialize(bool apply_patches, bool show_startup_toast) {
         // IOS-NIM-BOSS GlobalPolicyList->state: poking this forces a refresh after we changed the url
         Mocha_IOSUKernelWrite32(0xE24B3D90, 4);
 
-        DEBUG_FUNCTION_LINE_VERBOSE("Pretendo URL and NoSSL patches applied successfully.");
+        DEBUG_FUNCTION_LINE_VERBOSE("Samtendo URL and NoSSL patches applied successfully.");
 
         if (Config::show_startup_toast) {
             ShowNotification(get_pretendo_message());
         }
         Config::initialized = true;
     } else {
-        DEBUG_FUNCTION_LINE_VERBOSE("Pretendo URL and NoSSL patches skipped.");
+        DEBUG_FUNCTION_LINE_VERBOSE("Samtendo URL and NoSSL patches skipped.");
 
         if(Config::show_startup_toast) {
             ShowNotification(get_nintendo_network_message());

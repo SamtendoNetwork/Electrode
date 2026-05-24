@@ -26,6 +26,10 @@ Electrode's patches are all temporary, and only applied in-memory without modify
 ## Compiling - Docker
 Electrode's dependencies and build tooling can be handled as a container, which is recommended for WUPS plugins. Using `docker` or `podman`:
 ```shell
+# On Windows (make sure to use CMD):
+docker build -t inkay .
+docker run --rm -v %cd%:/app inkay make
+# On Linux:
 docker build -t inkay .
 docker run --rm -v $(pwd):/app inkay make
 # you can replace "make" with other commands - e.g. make clean
