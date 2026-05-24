@@ -221,14 +221,14 @@ WUMS_ALL_APPLICATION_STARTS_DONE() {
     hotpatchAccountSettings();
 
     if (Config::initialized && !Config::plugin_is_loaded) {
-        DEBUG_FUNCTION_LINE("Inkay is running but the plugin got unloaded");
+        DEBUG_FUNCTION_LINE("Electrode is running but the plugin got unloaded");
         if (!Config::block_initialize) {
-            ShowNotification("Inkay module is still running. Please restart the console");
+            ShowNotification("Electrode module is still running. Please restart the console");
         }
         Config::shown_warning = true;
     } else if (!Config::initialized && !Config::shown_warning) {
-        DEBUG_FUNCTION_LINE("Inkay module not initialized");
-        ShowNotification("Inkay module was not initialized. Ensure you have the Inkay plugin loaded");
+        DEBUG_FUNCTION_LINE("Electrode module not initialized");
+        ShowNotification("Electrode module was not initialized. Ensure you have the Electrode plugin loaded");
         Config::shown_warning = true;
     }
     if (!Config::initialized) {

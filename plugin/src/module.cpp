@@ -41,7 +41,7 @@ void Inkay_Initialize(bool apply_patches, bool show_startup_toast) {
         return;
     }
 
-    if (OSDynLoad_Acquire("inkay", &module) != OS_DYNLOAD_OK) {
+    if (OSDynLoad_Acquire("electrode", &module) != OS_DYNLOAD_OK) {
         DEBUG_FUNCTION_LINE("Failed to acquire module");
         ShowNotification(get_module_not_found_message());
         return;
