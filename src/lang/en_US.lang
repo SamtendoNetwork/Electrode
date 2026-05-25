@@ -9,6 +9,8 @@
 ,.need_menu_action="From Wii U menu only"
 ,.using_nintendo_network="Using Nintendo Network. Please ignore Electrode instability warning."
 ,.using_pretendo_network="Using Samtendo Network. Please ignore Electrode instability warning."
+,.sn_verify="If you wish to remove the verification popup please visit samtendo.net/verify on another device"
+,.e_ver="Running Electrode v0.0.2"
 ,.multiplayer_port_display="Using mendo UDP port %hu for multiplayer"
 ,.module_not_found="Samtendo Network patch failed - contact Samtendo support at discord.samtendo.net with code 686-1001"
 ,.module_init_not_found="Samtendo Network patch failed - contact Samtendo support at discord.samtendo.net with code 686-1002"

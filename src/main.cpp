@@ -107,6 +107,20 @@ static const char *get_pretendo_message() {
     return get_config_strings(get_system_language()).using_pretendo_network.data();
 }
 
+static const char *get_e_ver() {
+    // TL note: "Pretendo Network" is also a proper noun - though "Pretendo" alone can refer to us as a project
+    // TL note: "Using" instead of "Connected" is deliberate - we don't know if a successful connection exists, we are
+    // only specifying what we'll *attempt* to connect to
+    return get_config_strings(get_system_language()).e_ver.data();
+}
+
+static const char *get_verify() {
+    // TL note: "Pretendo Network" is also a proper noun - though "Pretendo" alone can refer to us as a project
+    // TL note: "Using" instead of "Connected" is deliberate - we don't know if a successful connection exists, we are
+    // only specifying what we'll *attempt* to connect to
+    return get_config_strings(get_system_language()).sn_verify.data();
+}
+
 static void Inkay_SetPluginRunning() {
     Config::plugin_is_loaded = true;
 }
@@ -129,7 +143,7 @@ static void Inkay_Initialize(bool apply_patches, bool show_startup_toast) {
     Config::show_startup_toast = show_startup_toast;
 
     if (Config::block_initialize) {
-        ShowNotification("Cannot load Inkay while the system is running. Please restart the console");
+        ShowNotification("Cannot load Electrode while the system is running. Please restart the console");
         return;
     }
 
@@ -153,13 +167,16 @@ static void Inkay_Initialize(bool apply_patches, bool show_startup_toast) {
         DEBUG_FUNCTION_LINE_VERBOSE("Samtendo URL and NoSSL patches applied successfully.");
 
         if (Config::show_startup_toast) {
+            ShowNotification(get_e_ver());
             ShowNotification(get_pretendo_message());
+            ShowNotification(get_verify());
         }
         Config::initialized = true;
     } else {
         DEBUG_FUNCTION_LINE_VERBOSE("Samtendo URL and NoSSL patches skipped.");
 
         if(Config::show_startup_toast) {
+            ShowNotification(get_e_ver());
             ShowNotification(get_nintendo_network_message());
         }
         Config::initialized = true;
