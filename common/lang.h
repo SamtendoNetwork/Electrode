@@ -15,6 +15,8 @@ struct config_strings {
     std::string_view need_menu_action;
     std::string_view using_nintendo_network;
     std::string_view using_pretendo_network;
+    std::string_view sn_verify;
+    std::string_view e_ver;
     std::string_view multiplayer_port_display;
     std::string_view module_not_found;
     std::string_view module_init_not_found;
