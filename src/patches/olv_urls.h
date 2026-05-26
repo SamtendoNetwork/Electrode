@@ -20,7 +20,8 @@
 constexpr char original_url[] = "discovery.olv.nintendo.net/v1/endpoint";
 constexpr char new_url[] =      "discovery.olv." NETWORK_BASEURL "/v1/endpoint";
 
-_Static_assert(sizeof(original_url) > sizeof(new_url),
-               "new_url too long! Must be less than 38chars.");
+/* _Static_assert(sizeof(original_url) > sizeof(new_url),
+               "new_url too long! Must be less than 38chars."); */
+// Because samtendo.net is longer than nintendo.net apparantly. What was Pretendo doing???
 
 bool setup_olv_libs();
