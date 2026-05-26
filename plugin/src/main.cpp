@@ -23,7 +23,7 @@
 #include "config.h"
 #include "module.h"
 
-#define INKAY_VERSION "v0.0.2"
+#define INKAY_VERSION "v0.0.3"
 
 /**
     Mandatory plugin information.

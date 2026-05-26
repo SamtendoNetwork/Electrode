@@ -39,7 +39,7 @@
 
 #include "ca_pem.h"
 
-#define INKAY_VERSION "v0.0.2"
+#define INKAY_VERSION "v0.0.3"
 
 /**
     Mandatory plugin information.
@@ -167,9 +167,9 @@ static void Inkay_Initialize(bool apply_patches, bool show_startup_toast) {
         DEBUG_FUNCTION_LINE_VERBOSE("Samtendo URL and NoSSL patches applied successfully.");
 
         if (Config::show_startup_toast) {
-            ShowNotification(get_e_ver());
-            ShowNotification(get_pretendo_message());
             ShowNotification(get_verify());
+            ShowNotification(get_pretendo_message());
+            ShowNotification(get_e_ver());
         }
         Config::initialized = true;
     } else {
