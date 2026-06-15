@@ -11,7 +11,7 @@ Electrode is an Aroma/WUPS plugin that patches various Nintendo Network URLs on 
 - Miiverse (in-game)
 - Miiverse applet
 
-Please be aware that Electrode is a fork of Inkay. While that is true, we have repurposed the code to work with Samtendo Network instead of Pretendo. When compiling or running commands related to any Dockerfiles or Makefiles, please ensure you use the original commands with the `inkay` name.
+Please be aware that Electrode is _loosely_ based off of Inkay. While that is true, we have repurposed the code to work with Samtendo Network instead of Pretendo. When compiling or running commands related to any Dockerfiles or Makefiles, please ensure you use the original commands with the `inkay` name.
 
 Electrode also includes game-specific patches to add extra features:
 - Modpack-specific matchmaking for global, regional rooms (by simulating extra DLC) - **Mario Kart 8**
