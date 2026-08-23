@@ -3,7 +3,7 @@
 ,.connect_to_network_setting="Connect to Samtendo Network"
 ,.show_startup_toast_setting="Show startup toast"
 ,.other_category="Other settings"
-,.reset_wwp_setting="Reset Wara Wara Plaza"
+,.reset_wwp_setting="Clear cache"
 ,.press_a_action="Press A"
 ,.restart_to_apply_action="Restart to apply"
 ,.need_menu_action="From Wii U menu only"
