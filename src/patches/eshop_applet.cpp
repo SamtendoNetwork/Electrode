@@ -32,7 +32,7 @@
 #include "ca_pem.h" // generated at buildtime
 
 constexpr char wave_original[] = "https://ninja.wup.shop.nintendo.net/ninja/wood_index.html?";
-constexpr char wave_new[] =      "http://samurai.wup.shop." NETWORK_BASEURL "/ninja/wood_index.html?";
+constexpr char wave_new[] =      "http://samurai-wup-shop." NETWORK_BASEURL "/ninja/wood_index.html?";
 
 struct eshop_allowlist {
     char scheme[16];
@@ -50,7 +50,7 @@ constexpr struct eshop_allowlist original_entry = {
 
 constexpr struct eshop_allowlist new_entry = {
     .scheme = "http",
-    .domain = "samurai.wup.shop." NETWORK_BASEURL,
+    .domain = "samurai-wup-shop." NETWORK_BASEURL,
     .path = "",
     .flags = {1, 1, 1, 1, 0},
 };

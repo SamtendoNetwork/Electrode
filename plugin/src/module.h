@@ -19,7 +19,7 @@
 enum class InkayStatus {
     Uninitialized, ///< The module isn't initialized
     Nintendo,      ///< The module is initialized but hasn't applied any patches
-    Pretendo,      ///< The module is initialized and has applied the Pretendo patches
+    Pretendo,      ///< The module is initialized and has applied the Samtendo patches
 
     Error = -1     ///< Failed to retrieve the module status
 };
