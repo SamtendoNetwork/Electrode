@@ -30,6 +30,8 @@ constexpr std::pair<const char *, const char *> dns_replacements[] = {
         // NNCS servers
         { "nncs1.app.nintendowifi.net", "nncs1.app." NETWORK_BASEURL },
         { "nncs2.app.nintendowifi.net", "nncs2.app." NETWORK_BASEURL },
+        // Super Mario Maker course info server
+        { "wup-ama.app.nintendo.net", "wup-ama.app." NETWORK_BASEURL },
 };
 
 static const char * replace_dns_name(const char *dns_name) {
