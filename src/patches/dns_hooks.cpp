@@ -37,10 +37,10 @@ constexpr std::pair<const char *, const char *> dns_replacements[] = {
 static const char * replace_dns_name(const char *dns_name) {
     if (!dns_name) return dns_name;
     if (!Config::connect_to_network) return dns_name;
-    DEBUG_FUNCTION_LINE_VERBOSE("Electrode/DNS: dns hook for: %s", dns_name);
+    DEBUG_FUNCTION_LINE("Electrode/DNS: dns hook for: %s", dns_name);
     for (auto [original, replacement] : dns_replacements) {
         if (strcmp(original, dns_name) == 0)
-            DEBUG_FUNCTION_LINE_VERBOSE("Electrode/DNS: Redirecting %s -> %s", dns_name, replacement);
+            DEBUG_FUNCTION_LINE("Electrode/DNS: Redirecting %s -> %s", dns_name, replacement);
             return replacement;
     }
 
